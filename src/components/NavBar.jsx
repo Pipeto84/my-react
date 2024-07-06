@@ -1,3 +1,5 @@
+import  ShoppingCartIcon  from '@mui/icons-material/ShoppingCart'
+import { Badge } from '@mui/material'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -19,6 +21,11 @@ export const NavBar = () => {
             </li>
           </ul>
         </div>
+        <NavLink to='/carrito'>
+          <Badge badgeContent={7} color='secondary'>
+            <ShoppingCartIcon color='action' />
+          </Badge>
+        </NavLink>
       </div>
     </nav>
   )
