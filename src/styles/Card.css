@@ -1,0 +1,49 @@
+.tarjeta {
+ display: flex;
+ border: 1px solid #ccc;
+ border-radius: 20px;
+ margin-bottom: 10px;
+ padding: 10px;
+}
+.tarjeta-imagen {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.tarjeta-contenido {
+  flex: 1;
+}
+.tarjeta-titulo {
+  margin: 0;
+}
+.tarjeta-descripcion {
+  margin: 0 0 10px;
+}
+.tarjeta-precio {
+  margin: 0;
+  font-weight: bold;
+}
+.boton-agregar {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.boton-agregar:hover {
+  background-color: #45a049;
+}
+.boton-quitar {
+  background-color: #af4c4c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.boton-quitar:hover {
+  background-color: #a04545;
+}
