@@ -1,34 +1,44 @@
+import {useState, useContext} from 'react'
+import { CarritoContext } from '../context/CarritoContext'
 import '../styles/Card.css'
-import {useState} from 'react'
 
-export const Card = ({imagen,titulo,descripcion,precio,agregar}) => {
-  const [agregado, setAgregado] = useState(agregar)
-  const clickAgregar = () => {
+export const Card = ({producto}) => {
+  const {
+    agregarProducto,
+    eliminarProducto,
+    aumentarProducto,
+    disminuirProducto
+  } = useContext(CarritoContext)
+
+  const [agregado, setAgregado] = useState(producto.agregar)
+
+  const clickAgregar = (producto) => {
     setAgregado(true)
+    agregarProducto(producto)
   }
-  const clickQuitar = () => {
+  const clickQuitar = (producto) => {
     setAgregado(false)
   }
   return (
     <div className='tarjeta'>
-      <img className='tarjeta-imagen' src={imagen} alt='imagen' />
+      <img className='tarjeta-imagen' src={producto.image} alt='imagen' />
       <div className='tarjeta-contenido'>
-        <h3 className='tarjeta-titulo'>{titulo}</h3>
-        <p className='tarjeta-descripcion'>{descripcion}</p>
-        <p className='tarjeta-precio'>$ {precio}</p>
+        <h3 className='tarjeta-titulo'>{producto.title}</h3>
+        <p className='tarjeta-descripcion'>{producto.description}</p>
+        <p className='tarjeta-precio'>$ {producto.price}</p>
         {
           agregado
           ? <button 
             className='boton-quitar'
             type='button'
-            onClick={clickQuitar}
+            onClick={()=>clickQuitar(producto)}
           >
             Quitar del carrito
           </button>
           : <button 
             className='boton-agregar'
             type='button'
-            onClick={clickAgregar}
+            onClick={()=>clickAgregar(producto)}
           >
             Agregar al carrito
           </button>

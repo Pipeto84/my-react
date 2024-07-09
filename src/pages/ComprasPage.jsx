@@ -10,12 +10,9 @@ export const Compras = () => {
       <hr/>
       {
         productos.map(producto => (
-          <Card key={producto.id}
-            imagen={producto.image}
-            titulo={producto.title}
-            descripcion={producto.description}
-            precio={producto.price}
-            agregar={producto.agregar}
+          <Card 
+            key={producto.id}
+            producto={producto}
           ></Card>
         ))
       }
