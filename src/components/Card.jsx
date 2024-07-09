@@ -6,8 +6,6 @@ export const Card = ({producto}) => {
   const {
     agregarProducto,
     eliminarProducto,
-    aumentarProducto,
-    disminuirProducto
   } = useContext(CarritoContext)
 
   const [agregado, setAgregado] = useState(producto.agregar)
@@ -18,6 +16,7 @@ export const Card = ({producto}) => {
   }
   const clickQuitar = (producto) => {
     setAgregado(false)
+    eliminarProducto(producto.id)
   }
   return (
     <div className='tarjeta'>

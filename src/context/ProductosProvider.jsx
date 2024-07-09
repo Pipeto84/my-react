@@ -11,7 +11,7 @@ export const ProductosProvider = ({children}) => {
       const data = await response.json()
       data.map(item=>item.agregar = false)
       setProductos(data)
-      console.log(data)
+      // console.log(data)
     } catch (error) {
       console.error('El error es: ',error)
     }

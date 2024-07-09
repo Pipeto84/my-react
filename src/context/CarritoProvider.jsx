@@ -1,5 +1,6 @@
-import {useReducer, useState} from 'react'
+import {useContext, useReducer} from 'react'
 import { CarritoContext } from './CarritoContext'
+import { ProductoContext } from './ProductosContext'
 
 export const CarritoProvider = ({children}) => {
 
@@ -10,23 +11,41 @@ export const CarritoProvider = ({children}) => {
       case '[COMPRAS] Agregar Producto':
         return [...state, action.payload]
       case '[COMPRAS] Eliminar Producto':
-        break
+        return state.filter((compra)=>compra.id !== action.payload)
       case '[COMPRAS] Aumentar Cantidad Producto':
-        break
+        return state.map(compra=>{
+          const cant = compra.cantidad + 1
+          if(compra.id === action.payload) return {...compra, cantidad: cant}
+          return compra
+        })
       case '[COMPRAS] Disminuir Cantidad Producto':
-        break
+        return state.map(compra =>{
+          const cant = compra.cantidad - 1
+          if(compra.id === action.payload && compra.cantidad > 1) return {...compra, cantidad: cant}
+          return compra
+        })
       default:
         return state;
     }
   }
 
+  const {productos} = useContext(ProductoContext)
+  const cambiarAgregarProductos = (idCompra, productos) => {
+    productos.map(producto=>{
+      if(idCompra === producto.id)return producto.agregar = !producto.agregar
+    })
+    console.log(productos)
+  }
+
   const [listaCompras, dispatch] = useReducer(listaReducer, initialLista)
 
   const agregarProducto = (compra) => {
+    compra.cantidad = 1
     const action = {
       type: '[COMPRAS] Agregar Producto',
       payload : compra
     }
+    cambiarAgregarProductos(compra.id, productos)
     dispatch(action)
   }
   const eliminarProducto = (id) => {
@@ -34,6 +53,7 @@ export const CarritoProvider = ({children}) => {
       type: '[COMPRAS] Eliminar Producto',
       payload : id
     }
+    cambiarAgregarProductos(id, productos)
     dispatch(action)
   }
   const aumentarProducto = (id) => {
