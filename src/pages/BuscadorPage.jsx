@@ -41,6 +41,18 @@ export const BuscadorPage = () => {
   const peliculas = () => {
     setSelector('Peliculas')
   }
+  const handlePlaceHolder = () => {
+    switch (selector) {
+      case 'Buscador':
+        return 'Selecciona el tema de busqueda'
+      case 'Clima':
+        return 'Ingresa una ciudad...'
+      case 'Peliculas':
+        return 'Ingresa en nombre de una pelicula...'
+      default:
+        return ''
+    }
+  }
   
   return (
     <div className='clima'>
@@ -48,25 +60,27 @@ export const BuscadorPage = () => {
       <form onSubmit={handleSubmit} className='formulario , container'>
         <div className="input-group mb-3 , buscador" >
           <button 
-              type="submit" 
-              className="btn btn-outline-secondary ,"
-              // onClick={buscar}
-            >Buscar</button>
-            <button type="button" className="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-              <span className="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul className="dropdown-menu">
-              <li><a onClick={clima} className="dropdown-item" href="#">Clima</a></li>
-              <li><hr className="dropdown-divider"/></li>
-              <li><a onClick={peliculas} className="dropdown-item" href="#">Peliculas</a></li>
-            </ul>
-              <input 
-                type="text" 
-                className="form-control , entrada" 
-                value={dataInput}
-                onChange={handleChanges}
-                placeholder=''
-              />
+            type="submit" 
+            className="btn btn-outline-secondary ,"
+            disabled={dataInput < 1}
+            // onClick={buscar}
+          >Buscar</button>
+          <button type="button" className="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span className="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul className="dropdown-menu" >
+            <li><a onClick={clima} className="dropdown-item" href="#">Clima</a></li>
+            <li><hr className="dropdown-divider"/></li>
+            <li><a onClick={peliculas} className="dropdown-item" href="#">Peliculas</a></li>
+          </ul>
+          <input 
+            type="text" 
+            className="form-control , entrada" 
+            value={dataInput}
+            onChange={handleChanges}
+            placeholder={handlePlaceHolder()}
+            disabled={selector === 'Buscador'}
+          />
         </div>
       </form>
       {seleccionada()}
