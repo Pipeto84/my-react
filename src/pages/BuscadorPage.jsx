@@ -1,6 +1,6 @@
 import {useState, useEffect, useContext} from 'react'
 import '../styles/Buscador.css'
-import { Clima } from '../components/Clima'
+import { Clima, fetchClima } from '../components/Clima'
 import { Peliculas } from '../components/Peliculas'
 import { ClimaContext } from '../context/ClimaContext'
 
@@ -8,7 +8,7 @@ export const BuscadorPage = () => {
   const [selector, setSelector] = useState('Buscador')
   const [dataInput, setDataInput] = useState('')
   const [enviado, setEnviado] = useState('')
-  const {fetchClima,infoCity} = useContext(ClimaContext)
+  // const {fetchClima,infoCity} = useContext(ClimaContext)
 
   const handleChanges = (e) => {
     setDataInput(e.target.value)
@@ -32,7 +32,7 @@ export const BuscadorPage = () => {
       case 'Peliculas':
         return <Peliculas ></Peliculas>
       default:
-        break
+        return
     }
   }
   const clima = () => {

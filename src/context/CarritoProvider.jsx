@@ -34,7 +34,7 @@ export const CarritoProvider = ({children}) => {
     productos.map(producto=>{
       if(idCompra === producto.id)return producto.agregar = !producto.agregar
     })
-    console.log(productos)
+    // console.log(productos)
   }
 
   const [listaCompras, dispatch] = useReducer(listaReducer, initialLista)

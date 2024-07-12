@@ -12,7 +12,7 @@ export const App = () => {
   return (
     <ProductosProvider>
       <CarritoProvider>
-        <ClimaProvider>
+        {/* <ClimaProvider> */}
           <NavBar></NavBar>
           <div className='container'>
             <Routes>
@@ -23,7 +23,7 @@ export const App = () => {
               <Route path='/*' element={<Navigate to='/' />}></Route>
             </Routes>
           </div>
-        </ClimaProvider>
+        {/* </ClimaProvider> */}
       </CarritoProvider>
     </ProductosProvider>
   )
