@@ -1,10 +1,12 @@
-import {useState} from 'react'
+import {useState, useContext} from 'react'
+import { ClimaContext } from '../context/ClimaContext'
 
 export const Clima = () => {
-    const [ciudad, setCiudad] = useState("")
-    const [datos, setDatos] = useState(null)
+  const [datos, setDatos] = useState(null)
 
-    return (
-    <div>Clima</div>
+  const {infoCity} = useContext(ClimaContext)
+  console.log(infoCity.name)
+  return (
+    <div>{infoCity.name}</div>
   )
 }
