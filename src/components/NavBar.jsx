@@ -9,7 +9,7 @@ export const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <NavLink to='/' className="navbar-brand" href="#">React Pipeto</NavLink>
+        <NavLink to='/buscador' className="navbar-brand" >React Pipeto</NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -20,6 +20,9 @@ export const NavBar = () => {
             </li>
             <li className="nav-item">
               <NavLink to='/compras' className="nav-link" >Compras</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to='/buscador' className="nav-link" >Buscador</NavLink>
             </li>
           </ul>
         </div>
