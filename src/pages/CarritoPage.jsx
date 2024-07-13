@@ -8,7 +8,7 @@ export const CarritoPage = () => {
     aumentarProducto,
     disminuirProducto
   } = useContext(CarritoContext);
-  console.log(listaCompras)
+  // console.log(listaCompras)
 
   const handlePrint = () => print()
 

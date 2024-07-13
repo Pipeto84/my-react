@@ -32,7 +32,7 @@ export const BuscadorPage = () => {
       case 'Peliculas':
         return <Peliculas ></Peliculas>
       default:
-        break
+        return
     }
   }
   const clima = () => {
