@@ -1,8 +1,8 @@
-import {useState, useEffect, useContext} from 'react'
-import '../styles/Buscador.css'
+import {useState, useContext} from 'react'
 import { Clima } from '../components/Clima'
 import { Peliculas } from '../components/Peliculas'
 import { ClimaContext } from '../context/ClimaContext'
+import '../styles/Buscador.css'
 
 export const BuscadorPage = () => {
   const [selector, setSelector] = useState('Buscador')
@@ -56,22 +56,21 @@ export const BuscadorPage = () => {
   
   return (
     <div className='clima'>
-      <h1 className='h1'>{selector}</h1>
+      <h1 className='h1'>{selector} </h1>
       <form onSubmit={handleSubmit} className='formulario , container'>
         <div className="input-group mb-3 , buscador" >
           <button 
             type="submit" 
-            className="btn btn-outline-secondary ,"
+            className="btn btn-outline-black ,"
             disabled={dataInput < 1}
-            // onClick={buscar}
           >Buscar</button>
           <button type="button" className="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
             <span className="visually-hidden">Toggle Dropdown</span>
           </button>
           <ul className="dropdown-menu" >
-            <li><a onClick={clima} className="dropdown-item" href="#">Clima</a></li>
+            <li><a onClick={clima} className="dropdown-item" >Clima</a></li>
             <li><hr className="dropdown-divider"/></li>
-            <li><a onClick={peliculas} className="dropdown-item" href="#">Peliculas</a></li>
+            <li><a onClick={peliculas} className="dropdown-item" >Peliculas</a></li>
           </ul>
           <input 
             type="text" 

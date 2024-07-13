@@ -1,14 +1,11 @@
 .clima {
   text-align: center;
-  /* align-self: center; */
 }
 .h1 {
   margin: 20px;
 }
 .buscador {
   margin: 20px;
-  /* top: 15%; */
-  /* left: 30%; */
 }
 .entrada {
   max-width: 600px;

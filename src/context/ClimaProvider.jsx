@@ -13,7 +13,6 @@ export const ClimaProvider = ({children}) => {
       const responde = await fetch(`${urlBasic}q=${city}&appid=${API_KEY}&lang=es`)
       const data = await responde.json()
       setInfoCity(data)
-      // console.log(data)
     } catch (error) {
       console.error('el error es: ',error)
     }

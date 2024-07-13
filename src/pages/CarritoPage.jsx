@@ -69,7 +69,7 @@ export const CarritoPage = () => {
           type="button"
           onClick={handlePrint}
           disabled={listaCompras < 1}
-        >Compra</button>
+        >Comprar</button>
       </div>
     </>
   );
