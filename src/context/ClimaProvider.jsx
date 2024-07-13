@@ -10,7 +10,7 @@ export const ClimaProvider = ({children}) => {
 
   const fetchClima = async (city) => {
     try {
-      const responde = await fetch(`${urlBasic}q=${city}&appid=${API_KEY}`)
+      const responde = await fetch(`${urlBasic}q=${city}&appid=${API_KEY}&lang=es`)
       const data = await responde.json()
       setInfoCity(data)
       // console.log(data)
