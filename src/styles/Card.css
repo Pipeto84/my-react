@@ -28,11 +28,9 @@
   margin: 0;
   font-weight: bold;
 }
-.botones-compra {
-}
 .boton-agregar {
   background-color: #4caf50;
-  color: blue;
+  color: white;
   border: none;
   border-radius: 4px;
   padding: 5px 10px;

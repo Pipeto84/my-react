@@ -8,7 +8,6 @@ export const CarritoPage = () => {
     aumentarProducto,
     disminuirProducto
   } = useContext(CarritoContext);
-  // console.log(listaCompras)
 
   const handlePrint = () => print()
 
@@ -18,7 +17,7 @@ export const CarritoPage = () => {
   }
 
   return (
-    <>
+    <div className="elCarrito">
       <table className="table table-striped">
         <thead>
           <tr>
@@ -71,6 +70,6 @@ export const CarritoPage = () => {
           disabled={listaCompras < 1}
         >Comprar</button>
       </div>
-    </>
+    </div>
   );
 };
