@@ -1,5 +1,4 @@
-.elCarrito {
-  margin: 30px;
-  max-width: 800px;
-  text-align: center;
+.carrito {
+  width: 1000px;
+  margin:30px auto;
 }

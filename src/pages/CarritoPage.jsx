@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CarritoContext } from "../context/CarritoContext";
+import '../styles/Carrito.css'
 
 export const CarritoPage = () => {
   const { 
@@ -17,7 +18,8 @@ export const CarritoPage = () => {
   }
 
   return (
-    <div className="elCarrito">
+    <div className="carrito">
+      <h1>Productos agregados</h1>
       <table className="table table-striped">
         <thead>
           <tr>

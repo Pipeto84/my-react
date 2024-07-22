@@ -1,15 +1,9 @@
-/* .contenedor-compras {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-} */
 h1 {
     text-align: center;
     margin: 20px;
 }
 .contenedor-productos {
     width: 100vw;
-    /* max-width: 1200px; */
 
     display: flex;
     flex-wrap: wrap;
