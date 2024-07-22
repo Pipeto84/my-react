@@ -66,7 +66,7 @@ export const BuscadorPage = () => {
   return (
     <div className='clima'>
       <h1 className='h1'>{titulo(selector)} </h1>
-      <form onSubmit={handleSubmit} className='formulario , container'>
+      <form onSubmit={handleSubmit} className='formulario , contenedor-buscar'>
         <div className="input-group mb-3 , buscador" >
           <button 
             type="submit" 

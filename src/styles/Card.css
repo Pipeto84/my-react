@@ -5,6 +5,8 @@
  margin-bottom: 10px;
  padding: 10px;
  background-color: white;
+ margin: 0;
+ width: 560px;
 }
 .tarjeta-imagen {
   width: 100px;
@@ -26,13 +28,16 @@
   margin: 0;
   font-weight: bold;
 }
+.botones-compra {
+}
 .boton-agregar {
   background-color: #4caf50;
-  color: white;
+  color: blue;
   border: none;
   border-radius: 4px;
   padding: 5px 10px;
   cursor: pointer;
+  justify-self: end;
 }
 .boton-agregar:hover {
   background-color: #45a049;
@@ -43,7 +48,8 @@
   border: none;
   border-radius: 4px;
   padding: 5px 10px;
-  cursor: pointer;
+  cursor: pointer ;
+
 }
 .boton-quitar:hover {
   background-color: #a04545;
