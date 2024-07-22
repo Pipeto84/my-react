@@ -44,19 +44,28 @@ export const BuscadorPage = () => {
   const handlePlaceHolder = () => {
     switch (selector) {
       case 'Buscador':
-        return 'Selecciona el tema de busqueda'
+        return 'Selecciona el tema de búsqueda'
       case 'Clima':
         return 'Ingresa una ciudad...'
       case 'Peliculas':
-        return 'Ingresa en nombre de una pelicula...'
+        return 'Ingresa en nombre de una película...'
       default:
         return ''
     }
   }
-  
+  const titulo = (selector) => {
+    if(selector === "Clima") {
+      return "Clima actual"
+    }else if (selector === "Peliculas") {
+      return "Información de películas"
+    }else {
+      return "Buscador informativo"
+    }
+
+  } 
   return (
     <div className='clima'>
-      <h1 className='h1'>{selector} </h1>
+      <h1 className='h1'>{titulo(selector)} </h1>
       <form onSubmit={handleSubmit} className='formulario , container'>
         <div className="input-group mb-3 , buscador" >
           <button 
