@@ -1,18 +1,19 @@
+/* .contenedor-compras {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+} */
 h1 {
     text-align: center;
-    /* display: flex;
-    justify-content: center; */
+    margin: 20px;
 }
-.contenedor-compras {
-    /* background-color: black; */
+.contenedor-productos {
     width: 100vw;
-    max-width: 1200px;
+    /* max-width: 1200px; */
 
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content:safe center;
-    /* flex-flow: column wrap;
-    align-items: flex-start; */
+    justify-content: center;
   }
   

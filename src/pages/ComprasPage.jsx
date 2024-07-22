@@ -6,10 +6,10 @@ import '../styles/Compras.css'
 export const Compras = () => {
   const {productos} = useContext(ProductoContext)
   return (
-    <>
+    <div className="contenedor-compras">
       <h1>Productos</h1>
       <hr/>
-      <div className="contenedor-compras">
+      <div className="contenedor-productos">
         {
           productos.map(producto => (
             <Card 
@@ -19,6 +19,6 @@ export const Compras = () => {
           ))
         }
       </div>
-    </>
+    </div>
   )
 }
