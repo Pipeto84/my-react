@@ -14,7 +14,7 @@ export const App = () => {
       <CarritoProvider>
         <ClimaProvider>
           <NavBar></NavBar>
-          <div className='container'>
+          <div>
             <Routes>
               <Route path='/' element={<HomePage></HomePage>}></Route>
               <Route path='/compras' element={<Compras></Compras>}></Route>
