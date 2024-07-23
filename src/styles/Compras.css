@@ -1,13 +1,28 @@
+.contenedor-compras {
+  max-width: 1140px;
+  /* width: 90%; */
+  margin: auto;
+}
 h1 {
-    text-align: center;
-    margin: 20px;
+  text-align: center;
+  margin: 20px;
 }
 .contenedor-productos {
-    width: 100vw;
+  width: 100%;
 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; */
+
+  display: grid;
+  /* gap: 20px; */
+  grid-template-columns: auto 1fr auto 1fr;
+  grid-template-rows: auto 1fr auto auto;
+}
   
+/* @media screen and (max-width: 1140px) {
+  .contenedor-productos {
+    grid-template-columns: 1fr;
+  }
+} */
