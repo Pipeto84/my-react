@@ -2,13 +2,15 @@ import {useState, useContext} from 'react'
 import { Clima } from '../components/Clima'
 import { Peliculas } from '../components/Peliculas'
 import { ClimaContext } from '../context/ClimaContext'
+import { MovieContext } from '../context/MovieContext'
 import '../styles/Buscador.css'
 
 export const BuscadorPage = () => {
   const [selector, setSelector] = useState('Buscador')
   const [dataInput, setDataInput] = useState('')
   const [enviado, setEnviado] = useState('')
-  const {fetchClima,infoCity} = useContext(ClimaContext)
+  const {fetchClima} = useContext(ClimaContext)
+  const {fetchMovie} = useContext(MovieContext)
 
   const handleChanges = (e) => {
     setDataInput(e.target.value)
@@ -18,6 +20,9 @@ export const BuscadorPage = () => {
     setEnviado(dataInput)
     if (selector === 'Clima') {
       fetchClima(dataInput)
+      setDataInput('')
+    }else if(selector === 'Peliculas'){
+      fetchMovie(dataInput)
       setDataInput('')
     }
   }
@@ -64,7 +69,7 @@ export const BuscadorPage = () => {
 
   } 
   return (
-    <div className='clima'>
+    <div className='buscar'>
       <h1 className='h1'>{titulo(selector)} </h1>
       <form onSubmit={handleSubmit} className='formulario , contenedor-buscar'>
         <div className="input-group mb-3 , buscador" >
