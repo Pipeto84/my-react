@@ -4,7 +4,6 @@ import { MovieContext } from './MovieContext'
 export const MovieProvider = ({children}) => {
   const urlBase ='https://api.themoviedb.org/3/search/movie?'
   const API_KEY="d6bd2332172452f8a7ef7c9b84b03443"
-  const urlImage = 'https://image.tmdb.org/t/p/w500'
 
   const [infoMovie, setInfoMovie] = useState([])
 
@@ -12,8 +11,8 @@ export const MovieProvider = ({children}) => {
     try {
       const response = await fetch(`${urlBase}query=${movie}&api_key=${API_KEY}`)
       const data = await response.json()
-      setInfoMovie(data)
-      console.log(data)
+      setInfoMovie(data.results)
+      console.log(data.results)
     } catch (error) {
       console.error('el error en las peliculas es: ', error)
     }

@@ -1,0 +1,18 @@
+.movieList {
+  /* max-width: 1100px; */
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  /* justify-content: center; */
+}
+.movieCard {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.movieCard img {
+  width: 100%;
+  height: auto;
+}
