@@ -75,7 +75,7 @@ export const BuscadorPage = () => {
         <div className="input-group mb-3 , buscador" >
           <button 
             type="submit" 
-            className="btn btn-outline-black ,"
+            className="btn btn-outline-dark ,"
             disabled={dataInput < 1}
           >Buscar</button>
           <button type="button" className="btn btn-outline-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
@@ -93,6 +93,7 @@ export const BuscadorPage = () => {
             onChange={handleChanges}
             placeholder={handlePlaceHolder()}
             disabled={selector === 'Buscador'}
+            autoFocus
           />
         </div>
       </form>
