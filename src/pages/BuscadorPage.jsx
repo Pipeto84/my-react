@@ -70,7 +70,7 @@ export const BuscadorPage = () => {
   } 
   return (
     <div className='buscar'>
-      <h1 className='h1'>{titulo(selector)} </h1>
+      <h1 className='titulo'>{titulo(selector)} </h1>
       <form onSubmit={handleSubmit} className='formulario , contenedor-buscar'>
         <div className="input-group mb-3 , buscador" >
           <button 
@@ -78,7 +78,7 @@ export const BuscadorPage = () => {
             className="btn btn-outline-black ,"
             disabled={dataInput < 1}
           >Buscar</button>
-          <button type="button" className="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" className="btn btn-outline-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
             <span className="visually-hidden">Toggle Dropdown</span>
           </button>
           <ul className="dropdown-menu" >
