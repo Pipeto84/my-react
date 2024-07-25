@@ -1,21 +1,24 @@
 import {useContext} from 'react'
 import { ProductoContext } from '../context/ProductosContext'
 import { Card } from '../components/Card'
+import '../styles/Compras.css'
 
 export const Compras = () => {
   const {productos} = useContext(ProductoContext)
   return (
-    <>
-      <h1>Productos</h1>
+    <div className="contenedor-compras">
+      <h1 className='tituloProductos'>Productos</h1>
       <hr/>
-      {
-        productos.map(producto => (
-          <Card 
-            key={producto.id}
-            producto={producto}
-          ></Card>
-        ))
-      }
-    </>
+      <div className="contenedor-productos">
+        {
+          productos.map(producto => (
+            <Card 
+              key={producto.id}
+              producto={producto}
+            ></Card>
+          ))
+        }
+      </div>
+    </div>
   )
 }

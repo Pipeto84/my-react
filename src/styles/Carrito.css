@@ -1,0 +1,20 @@
+.carrito {
+  max-width: 800px;
+  min-width: 400px;
+  margin:30px auto;
+}
+.linkCompras {
+  font-size: 30px;
+  color: green;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.sinCompras {
+  color: rgb(43, 144, 226);
+  text-align: center;
+  margin-top: 40px;
+}
+.tituloCarrito {
+  text-align: center;
+}

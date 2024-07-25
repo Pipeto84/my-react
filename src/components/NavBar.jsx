@@ -7,9 +7,9 @@ import { CarritoContext } from '../context/CarritoContext'
 export const NavBar = () => {
   const {listaCompras} = useContext(CarritoContext)
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div className="container-fluid">
-        <NavLink to='/buscador' className="navbar-brand" >React Pipeto</NavLink>
+        <NavLink to='/' className="navbar-brand" >React Pipeto</NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -28,7 +28,7 @@ export const NavBar = () => {
         </div>
         <NavLink to='/carrito'>
           <Badge badgeContent={listaCompras.length} color='secondary'>
-            <ShoppingCartIcon color='action' />
+            <ShoppingCartIcon color='inherit' />
           </Badge>
         </NavLink>
       </div>

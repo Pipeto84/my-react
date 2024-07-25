@@ -25,23 +25,25 @@ export const Card = ({producto}) => {
         <h3 className='tarjeta-titulo'>{producto.title}</h3>
         <p className='tarjeta-descripcion'>{producto.description}</p>
         <p className='tarjeta-precio'>$ {producto.price}</p>
-        {
-          agregado
-          ? <button 
-            className='boton-quitar'
-            type='button'
-            onClick={()=>clickQuitar(producto)}
-          >
-            Quitar del carrito
-          </button>
-          : <button 
-            className='boton-agregar'
-            type='button'
-            onClick={()=>clickAgregar(producto)}
-          >
-            Agregar al carrito
-          </button>
-        }
+        <div className="botones-compra">
+          {
+            agregado
+            ? <button 
+              className='boton-quitar'
+              type='button'
+              onClick={()=>clickQuitar(producto)}
+            >
+              Quitar del carrito
+            </button>
+            : <button 
+              className='boton-agregar'
+              type='button'
+              onClick={()=>clickAgregar(producto)}
+            >
+              Agregar al carrito
+            </button>
+          }
+        </div>
       </div>
     </div>
   )
