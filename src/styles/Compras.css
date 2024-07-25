@@ -2,9 +2,10 @@
   max-width: 1220px;
   margin: auto;
 }
-h1 {
+.tituloProductos {
   text-align: center;
   margin: 20px;
+  color: green;
 }
 .contenedor-productos {
   width: 100%;

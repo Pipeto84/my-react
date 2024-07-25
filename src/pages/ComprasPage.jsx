@@ -7,7 +7,7 @@ export const Compras = () => {
   const {productos} = useContext(ProductoContext)
   return (
     <div className="contenedor-compras">
-      <h1>Productos</h1>
+      <h1 className='tituloProductos'>Productos</h1>
       <hr/>
       <div className="contenedor-productos">
         {

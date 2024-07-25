@@ -19,8 +19,9 @@ export const CarritoPage = () => {
   console.log(listaCompras)
   return (
     <div className="carrito">
-      <h1>Productos agregados</h1>
-      <h3 hidden={listaCompras.length > 0}>No tienes productos agregados</h3>
+      <h1 className="tituloCarrito" hidden={listaCompras < 1}>Productos agregados</h1>
+      <h3 className="sinCompras" hidden={listaCompras.length > 0}>No tienes <a className="linkCompras" hidden={listaCompras.length > 0} href="/compras">Productos</a> agregados</h3>
+      {/* <a className="linkCompras" hidden={listaCompras.length > 0} href="/compras">Productos</a> */}
       <table className="table table-striped" hidden={listaCompras < 1}>
         <thead>
           <tr>
@@ -70,7 +71,8 @@ export const CarritoPage = () => {
           className="btn btn-primary"
           type="button"
           onClick={handlePrint}
-          disabled={listaCompras < 1}
+          // disabled={listaCompras < 1}
+          hidden={listaCompras < 1}
         >Comprar</button>
       </div>
     </div>
