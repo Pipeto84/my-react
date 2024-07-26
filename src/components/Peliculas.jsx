@@ -6,6 +6,7 @@ export const Peliculas = () => {
   const urlImage = 'https://image.tmdb.org/t/p/w500'
 
   const {infoMovie} = useContext(MovieContext)
+  console.log(infoMovie)
   return (
     <div className="movieList">
       {

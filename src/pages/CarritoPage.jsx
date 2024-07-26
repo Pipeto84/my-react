@@ -16,7 +16,6 @@ export const CarritoPage = () => {
     return listaCompras.reduce((total, item)=>
       total + (item.price * item.cantidad),0).toFixed(2)
   }
-  console.log(listaCompras)
   return (
     <div className="carrito">
       <h1 className="tituloCarrito" hidden={listaCompras < 1}>Productos agregados</h1>

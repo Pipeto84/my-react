@@ -14,11 +14,11 @@ export const ClimaProvider = ({children}) => {
       const data = await response.json()
       setInfoCity(data)
     } catch (error) {
-      console.error('el error es: ',error)
+      console.error('el error del clima es: ',error)
     }
   }
   return (
-    <ClimaContext.Provider value={{fetchClima,infoCity}}>
+    <ClimaContext.Provider value={{fetchClima, infoCity}}>
       {children}
     </ClimaContext.Provider>
   )

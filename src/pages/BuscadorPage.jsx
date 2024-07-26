@@ -35,7 +35,11 @@ export const BuscadorPage = () => {
           return
         }
       case 'Peliculas':
-        return <Peliculas ></Peliculas>
+        if (enviado.length > 0) {
+          return <Peliculas ></Peliculas>
+        }else {
+          return
+        }
       default:
         return
     }
