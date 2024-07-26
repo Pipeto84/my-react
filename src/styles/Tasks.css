@@ -1,0 +1,18 @@
+.formulario {
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgb(71, 71, 71);
+  margin: 30px auto;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+.labelTitulo {
+  font-size: 25px;
+  color: white;
+}
+.tareaBotonCrear {
+  align-self: flex-start;
+  width: 80px;
+}
