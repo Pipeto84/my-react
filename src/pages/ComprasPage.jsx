@@ -3,7 +3,7 @@ import { ProductoContext } from '../context/ProductosContext'
 import { Card } from '../components/Card'
 import '../styles/Compras.css'
 
-export const Compras = () => {
+export const ComprasPage = () => {
   const {productos} = useContext(ProductoContext)
   return (
     <div className="contenedor-compras">
