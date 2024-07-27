@@ -9,6 +9,7 @@ import { ProductosProvider } from './context/ProductosProvider'
 import { CarritoProvider } from './context/CarritoProvider'
 import { ClimaProvider } from './context/ClimaProvider'
 import { MovieProvider } from './context/MovieProvider'
+import { TareasProvider } from './context/TareasProvider'
 
 export const App = () => {
   return (
@@ -16,17 +17,19 @@ export const App = () => {
       <CarritoProvider>
         <ClimaProvider>
           <MovieProvider>
-            <NavBar></NavBar>
-            <div>
-              <Routes>
-                <Route path='/' element={<HomePage></HomePage>}></Route>
-                <Route path='/tareas' element={<TasksPage></TasksPage>}></Route>
-                <Route path='/compras' element={<ComprasPage></ComprasPage>}></Route>
-                <Route path='/carrito' element={<CarritoPage></CarritoPage>}></Route>
-                <Route path='/buscador' element={<BuscadorPage></BuscadorPage>}></Route>
-                <Route path='/*' element={<Navigate to='/' />}></Route>
-              </Routes>
-            </div>
+            <TareasProvider>
+              <NavBar></NavBar>
+              <div>
+                <Routes>
+                  <Route path='/' element={<HomePage></HomePage>}></Route>
+                  <Route path='/tareas' element={<TasksPage></TasksPage>}></Route>
+                  <Route path='/compras' element={<ComprasPage></ComprasPage>}></Route>
+                  <Route path='/carrito' element={<CarritoPage></CarritoPage>}></Route>
+                  <Route path='/buscador' element={<BuscadorPage></BuscadorPage>}></Route>
+                  <Route path='/*' element={<Navigate to='/' />}></Route>
+                </Routes>
+              </div>
+            </TareasProvider>
           </MovieProvider>
         </ClimaProvider>
       </CarritoProvider>
