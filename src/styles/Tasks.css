@@ -43,3 +43,8 @@
 .botonEliminarTarea {
   justify-self: center;
 }
+@media screen and (max-width: 420px) {
+  .listaTareas {
+    justify-content: center;
+  }
+}
