@@ -29,7 +29,7 @@ export const TaskForm = () => {
             type="text"
             className="form-control tareaTitulo"
             id="exampleInputEmail1"
-            placeholder="Ingresa el nombre de la tarea..."
+            placeholder="Nombre de la tarea..."
             onChange={(e) => setTitulo(e.target.value)}
             value={titulo}
             autoFocus
@@ -38,7 +38,7 @@ export const TaskForm = () => {
         <div className="mb-3">
           <textarea
             className="form-control tareaDescripcion"
-            placeholder="Ingresa la descripcion de la tarea..."
+            placeholder="Descripcion de la tarea..."
             onChange={(e) => setDescripcion(e.target.value)}
             value={descripcion}
           ></textarea>
