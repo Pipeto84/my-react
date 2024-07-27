@@ -41,7 +41,8 @@ export const TaskForm = () => {
             placeholder="Descripcion de la tarea..."
             onChange={(e) => setDescripcion(e.target.value)}
             value={descripcion}
-          ></textarea>
+            disabled={titulo.length < 1}
+            ></textarea>
         </div>
         <button 
           type="submit" 

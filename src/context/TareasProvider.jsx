@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { TareasContext } from './TareasContext'
 
 export const TareasProvider = ({children}) => {
-  const [tasks, setTasks] = useState([])
+  const storageTasks = JSON.parse(localStorage.getItem('tareas'))
+  console.log(storageTasks)
+  const [tasks, setTasks] = useState(storageTasks)
   const id = new Date().getTime()
   
   const crearTarea = (task) => {
@@ -12,9 +14,13 @@ export const TareasProvider = ({children}) => {
       descripcion: task.descripcion
     }])
   }
+  console.log(tasks)
   const eliminarTarea = (id) => {
     setTasks(tasks.filter(task=>task.id !== id))
   }
+  useEffect(() => {
+    localStorage.setItem('tareas', JSON.stringify(tasks))
+  }, [tasks])
   return (
     <TareasContext.Provider value={{
       tasks,
