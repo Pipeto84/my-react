@@ -5,7 +5,7 @@ import "../../styles/Tasks.css";
 export const TaskForm = () => {
   const [titulo, setTitulo] = useState("");
   const [descripcion, setDescripcion] = useState("");
-  const { tasks, crearTarea } = useContext(TareasContext);
+  const { crearTarea } = useContext(TareasContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,7 +16,7 @@ export const TaskForm = () => {
     setTitulo("");
     setDescripcion("");
   };
-  console.log(tasks);
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="formulario">
