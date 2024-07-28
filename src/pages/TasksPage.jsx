@@ -1,5 +1,5 @@
-import { TaskForm } from '../components/tasks/TaskForm'
-import { TaskList } from '../components/tasks/TaskList'
+import { TaskForm } from '../components/tareas/TaskForm'
+import { TaskList } from '../components/tareas/TaskList'
 
 export const TasksPage = () => {
   return (

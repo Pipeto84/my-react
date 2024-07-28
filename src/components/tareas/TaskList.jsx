@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { TareasContext } from "../../context/TareasContext"
 import { TaskCard } from "./TaskCard"
-import "../../styles/Tasks.css";
+import "../../styles/tareas/Tasks.css";
 
 export const TaskList = () => {
   const {tasks} = useContext(TareasContext)

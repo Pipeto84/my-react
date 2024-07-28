@@ -1,7 +1,7 @@
 import {useContext} from 'react'
 import { ProductoContext } from '../context/ProductosContext'
-import { Card } from '../components/Card'
-import '../styles/Compras.css'
+import { Card } from '../components/compras/CardCompras'
+import '../styles/compras/Compras.css'
 
 export const ComprasPage = () => {
   const {productos} = useContext(ProductoContext)

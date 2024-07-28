@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { ClimaContext } from '../context/ClimaContext'
+import { ClimaContext } from '../../context/ClimaContext'
 
 export const Clima = () => {
   const Kelvin = 273.15

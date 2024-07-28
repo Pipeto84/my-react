@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { TareasContext } from "../../context/TareasContext"
-import "../../styles/Tasks.css";
+import "../../styles/tareas/Tasks.css";
 
 export const TaskCard = ({task}) => {
   const {eliminarTarea} = useContext(TareasContext)

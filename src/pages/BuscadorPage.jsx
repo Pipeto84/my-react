@@ -1,9 +1,9 @@
 import {useState, useContext} from 'react'
-import { Clima } from '../components/Clima'
-import { Peliculas } from '../components/Peliculas'
+import { Clima } from '../components/buscador/Clima'
+import { Peliculas } from '../components/buscador/Peliculas'
 import { ClimaContext } from '../context/ClimaContext'
 import { MovieContext } from '../context/MovieContext'
-import '../styles/Buscador.css'
+import '../styles/buscador/Buscador.css'
 
 export const BuscadorPage = () => {
   const [selector, setSelector] = useState('Buscador')
@@ -75,7 +75,7 @@ export const BuscadorPage = () => {
   return (
     <div className='buscar'>
       <h1 className='titulo'>{titulo(selector)} </h1>
-      <form onSubmit={handleSubmit} className='formulario , contenedor-buscar'>
+      <form onSubmit={handleSubmit} className='contenedor-buscar'>
         <div className="input-group mb-3 , buscador" >
           <button 
             type="submit" 

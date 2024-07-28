@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { TareasContext } from "../../context/TareasContext";
-import "../../styles/Tasks.css";
+import "../../styles/tareas/Tasks.css";
 
 export const TaskForm = () => {
   const [titulo, setTitulo] = useState("");
