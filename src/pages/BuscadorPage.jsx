@@ -53,7 +53,7 @@ export const BuscadorPage = () => {
   const handlePlaceHolder = () => {
     switch (selector) {
       case 'Buscador':
-        return 'Selecciona el tema de búsqueda'
+        return 'Selecciona el tema...'
       case 'Clima':
         return 'Ingresa una ciudad...'
       case 'Peliculas':
@@ -85,7 +85,7 @@ export const BuscadorPage = () => {
           <button type="button" className="btn btn-outline-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
             <span className="visually-hidden">Toggle Dropdown</span>
           </button>
-          <ul className="dropdown-menu" >
+          <ul className="dropdown-menu listaTemas" >
             <li><a onClick={clima} className="dropdown-item" >Clima</a></li>
             <li><hr className="dropdown-divider"/></li>
             <li><a onClick={peliculas} className="dropdown-item" >Peliculas</a></li>
