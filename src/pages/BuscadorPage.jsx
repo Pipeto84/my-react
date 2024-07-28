@@ -70,13 +70,12 @@ export const BuscadorPage = () => {
     }else {
       return "Buscador informativo"
     }
-
   } 
   return (
     <div className='buscar'>
       <h1 className='titulo'>{titulo(selector)} </h1>
-      <form onSubmit={handleSubmit} className='contenedor-buscar'>
-        <div className="input-group mb-3 , buscador" >
+      <form onSubmit={handleSubmit}>
+        <div className="input-group mb-3 buscador" >
           <button 
             type="submit" 
             className="btn btn-outline-dark ,"
@@ -94,10 +93,10 @@ export const BuscadorPage = () => {
             type="text" 
             className="form-control , entrada" 
             value={dataInput}
-            onChange={handleChanges}
+            onChange={(e)=>setDataInput(e.target.value)}
             placeholder={handlePlaceHolder()}
             disabled={selector === 'Buscador'}
-            autoFocus
+            id='inputBuscar'
           />
         </div>
       </form>

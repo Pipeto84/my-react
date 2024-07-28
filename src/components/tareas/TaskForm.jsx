@@ -22,13 +22,13 @@ export const TaskForm = () => {
       <div className="formulario">
         <div className="mb-3">
           <label
-            htmlFor="exampleInputEmail1"
+            htmlFor="inputTask"
             className="form-label labelTitulo"
           >Crear tarea</label>
           <input
             type="text"
             className="form-control tareaTitulo"
-            id="exampleInputEmail1"
+            id="inputTask"
             placeholder="Nombre de la tarea..."
             onChange={(e) => setTitulo(e.target.value)}
             value={titulo}
