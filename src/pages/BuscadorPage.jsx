@@ -53,11 +53,11 @@ export const BuscadorPage = () => {
   const handlePlaceHolder = () => {
     switch (selector) {
       case 'Buscador':
-        return 'Selecciona el tema...'
+        return '<-- Selecciona un tema...'
       case 'Clima':
         return 'Ingresa una ciudad...'
       case 'Peliculas':
-        return 'Ingresa en nombre de una película...'
+        return 'Ingresa nombre de película...'
       default:
         return ''
     }
@@ -66,7 +66,7 @@ export const BuscadorPage = () => {
     if(selector === "Clima") {
       return "Clima actual"
     }else if (selector === "Peliculas") {
-      return "Información de películas"
+      return "Información Películas"
     }else {
       return "Buscador informativo"
     }
@@ -82,7 +82,7 @@ export const BuscadorPage = () => {
             disabled={dataInput < 1}
           >Buscar</button>
           <button type="button" className="btn btn-outline-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            <span className="visually-hidden">Toggle Dropdown</span>
+            {/* <span className="visually-hidden">Toggle Dropdown</span> */}
           </button>
           <ul className="dropdown-menu listaTemas" >
             <li><a onClick={clima} className="dropdown-item" >Clima</a></li>
@@ -93,7 +93,7 @@ export const BuscadorPage = () => {
             type="text" 
             className="form-control , entrada" 
             value={dataInput}
-            onChange={(e)=>setDataInput(e.target.value)}
+            onChange={handleChanges}
             placeholder={handlePlaceHolder()}
             disabled={selector === 'Buscador'}
             id='inputBuscar'
