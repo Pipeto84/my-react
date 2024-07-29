@@ -97,6 +97,7 @@ export const BuscadorPage = () => {
             placeholder={handlePlaceHolder()}
             disabled={selector === 'Buscador'}
             id='inputBuscar'
+            autoComplete='on'
           />
         </div>
       </form>
