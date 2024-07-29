@@ -23,6 +23,9 @@ export const TareasProvider = ({children}) => {
   const eliminarTarea = (id) => {
     setTasks(tasks.filter(task=>task.id !== id))
   }
+  const eliminarTodas = () => {
+    setTasks([])
+  }
   useEffect(() => {
     localStorage.setItem('tareasReactPipeto84', JSON.stringify(tasks))
   }, [tasks])
@@ -30,7 +33,8 @@ export const TareasProvider = ({children}) => {
     <TareasContext.Provider value={{
       tasks,
       crearTarea,
-      eliminarTarea
+      eliminarTarea,
+      eliminarTodas
     }}>
       {children}
     </TareasContext.Provider>

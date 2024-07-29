@@ -13,9 +13,16 @@
   font-size: 25px;
   color: white;
 }
-.tareaBotonCrear {
-  align-self: flex-start;
+.botonesForm {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.botonCrearTarea {
   width: 80px;
+}
+.botonEliminarTodas {
+  justify-self: end;
+  width: 130px;
 }
 .listaTareas {
   max-width: 640px;
