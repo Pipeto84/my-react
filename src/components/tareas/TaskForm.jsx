@@ -5,7 +5,7 @@ import "../../styles/tareas/Tasks.css";
 export const TaskForm = () => {
   const [titulo, setTitulo] = useState("");
   const [descripcion, setDescripcion] = useState("");
-  const { crearTarea } = useContext(TareasContext);
+  const { tasks, crearTarea, eliminarTodas } = useContext(TareasContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,6 +32,7 @@ export const TaskForm = () => {
             placeholder="Nombre de la tarea..."
             onChange={(e) => setTitulo(e.target.value)}
             value={titulo}
+            autoComplete="off"
             autoFocus
           />
         </div>
@@ -44,11 +45,19 @@ export const TaskForm = () => {
             disabled={titulo.length < 1}
             ></textarea>
         </div>
-        <button 
-          type="submit" 
-          className="btn btn-primary tareaBotonCrear"
-          disabled={titulo.length < 1}
-        >Crear</button>
+        <div className="botonesForm">
+          <button 
+            type="submit" 
+            className="btn btn-primary botonCrearTarea"
+            disabled={titulo.length < 1}
+          >Crear</button>
+          <button 
+            className="btn btn-danger botonEliminarTodas"
+            type="button"
+            onClick={eliminarTodas}
+            disabled={tasks.length < 1 }
+          >Eliminar todas</button>
+        </div>
       </div>
     </form>
   );
