@@ -11,7 +11,7 @@ export const CarritoPage = () => {
   } = useContext(CarritoContext);
 
   const handlePrint = () => print()
-
+  localStorage.clear()
   const handleTotal = () => {
     return listaCompras.reduce((total, item)=>
       total + (item.price * item.cantidad),0).toFixed(2)
