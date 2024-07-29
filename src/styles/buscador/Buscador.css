@@ -1,0 +1,22 @@
+.buscar {
+  text-align: center;
+  background-color: #57a1dd;
+  height: 100vh;
+  color: rgb(36, 36, 36);
+}
+.titulo {
+  padding: 40px 20px 20px;
+  margin: 0;
+}
+.buscador {
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.listaTemas {
+  background-color: rgb(151, 150, 150);
+}
+.entrada {
+  max-width: 600px;
+}

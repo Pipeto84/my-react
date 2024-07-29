@@ -1,0 +1,57 @@
+.formulario {
+  max-width: 640px;
+  padding: 30px;
+  background-color: rgb(71, 71, 71);
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+}
+.labelTitulo {
+  font-size: 25px;
+  color: white;
+}
+.botonesForm {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.botonCrearTarea {
+  width: 80px;
+}
+.botonEliminarTodas {
+  justify-self: end;
+  width: 130px;
+}
+.listaTareas {
+  max-width: 640px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
+}
+.contenedorTarea {
+  background-color: rgb(71, 71, 71);
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+}
+.tituloTarea {
+  justify-self: center;
+}
+.botonEliminarTarea {
+  justify-self: center;
+}
+@media screen and (max-width: 420px) {
+  .listaTareas {
+    justify-content: center;
+  }
+}

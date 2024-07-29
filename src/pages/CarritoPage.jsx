@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CarritoContext } from "../context/CarritoContext";
-import '../styles/Carrito.css'
+import '../styles/compras/Carrito.css'
 
 export const CarritoPage = () => {
   const { 
@@ -11,12 +11,11 @@ export const CarritoPage = () => {
   } = useContext(CarritoContext);
 
   const handlePrint = () => print()
-
+  localStorage.clear()
   const handleTotal = () => {
     return listaCompras.reduce((total, item)=>
       total + (item.price * item.cantidad),0).toFixed(2)
   }
-  console.log(listaCompras)
   return (
     <div className="carrito">
       <h1 className="tituloCarrito" hidden={listaCompras < 1}>Productos agregados</h1>

@@ -12,7 +12,6 @@ export const MovieProvider = ({children}) => {
       const response = await fetch(`${urlBase}query=${movie}&api_key=${API_KEY}`)
       const data = await response.json()
       setInfoMovie(data.results)
-      console.log(data.results)
     } catch (error) {
       console.error('el error en las peliculas es: ', error)
     }

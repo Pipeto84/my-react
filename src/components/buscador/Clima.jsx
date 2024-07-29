@@ -1,5 +1,6 @@
 import { useContext } from 'react'
-import { ClimaContext } from '../context/ClimaContext'
+import { ClimaContext } from '../../context/ClimaContext'
+import '../../styles/buscador/Clima.css'
 
 export const Clima = () => {
   const Kelvin = 273.15
@@ -9,7 +10,7 @@ export const Clima = () => {
     <div>
       {
         infoCity && (
-          <div>
+          <div className='infoClima'>
             <h2>{infoCity.name + ', ' + infoCity.sys.country }</h2>
             <p>Temperatura: {(infoCity.main.temp - Kelvin).toFixed(0)} ॰C</p>
             <p>Descripcion meteorologica: {infoCity.weather[0].description}</p>
