@@ -7,7 +7,9 @@ export const HomePage = () => {
       <a href="https://github.com/Pipeto84" target="_blank">
         <img src={reactLogo} className="logo react" alt="React logo" />
       </a>
-      <h1 className='h1Home'>React Pipeto84</h1>
+      <a href="https://github.com/Pipeto84" target="_blank" className='aTitulo'>
+        <h1 className='h1Home'>React Pipeto84</h1>
+      </a>
     </div>
   )
 }

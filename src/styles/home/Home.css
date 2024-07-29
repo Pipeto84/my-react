@@ -7,8 +7,15 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 }
+.aTitulo {
+  text-decoration-line: none;
+}
 .h1Home {
   font-size: 3.2em;
+  color: gray;
+}
+.h1Home:hover {
+  filter: drop-shadow(0 0 2em #fff);
 }
 .logo {
   height: 10em;
@@ -28,7 +35,7 @@
   }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .logo {
+  a:nth-of-type(1) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
