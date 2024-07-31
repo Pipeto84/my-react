@@ -27,3 +27,12 @@
 .aClima, .aPelicula {
   color: rgb(148, 86, 86);
 }
+.iconoClima {
+  max-width: 5rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+.iconoPelicula {
+  max-width: 5rem;
+  margin-top: 2rem;
+}

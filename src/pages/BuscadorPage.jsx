@@ -3,33 +3,55 @@ import { Clima } from '../components/buscador/Clima'
 import { Peliculas } from '../components/buscador/Peliculas'
 import { ClimaContext } from '../context/ClimaContext'
 import { MovieContext } from '../context/MovieContext'
+import iconMovie from '../assets/movie.svg'
+import iconWeather from '../assets/weather.svg'
 import '../styles/buscador/Buscador.css'
 
 export const BuscadorPage = () => {
   const [selector, setSelector] = useState('Buscador')
   const [dataInput, setDataInput] = useState('')
   const [enviado, setEnviado] = useState('')
+  const [iconoTema, setIconoTema] = useState(false)
   const {fetchClima} = useContext(ClimaContext)
   const {fetchMovie} = useContext(MovieContext)
 
   const clima = () => {
     setSelector('Clima')
+    setIconoTema(true)
+    setEnviado('')
   }
   const peliculas = () => {
     setSelector('Peliculas')
+    setIconoTema(true)
+    setEnviado('')
   }
   const infoBuscar = <h4 className="textoEnBuscador">
-    Busca el <a className='aClima' href='#' onClick={clima}>clima </a> 
+    Busca el <a className='aClima' href='#' onClick={clima}>Clima </a> 
     actual en la ciudad que quieras o busca 
     información sobre una 
-    <a className='aPelicula' href='#' onClick={peliculas}> película.</a>  
+    <a className='aPelicula' href='#' onClick={peliculas}> Película.</a>  
   </h4>
+  const iconosBuscar = () => {
+    if (selector === 'Buscador') {
+      return (
+        <>
+          <a href="#" onClick={clima}>
+            <img className="iconoClima" src={iconWeather} alt="icono clima" />
+          </a>
+          <a href="#" onClick={peliculas}>
+            <img className="iconoPelicula" src={iconMovie} alt="icono pelicula" />
+          </a>
+        </>
+      )
+    }
+  }
   const handleChanges = (e) => {
     setDataInput(e.target.value)
   }
   const handleSubmit = (e) => {
     e.preventDefault()
     setEnviado(dataInput)
+    setIconoTema(false)
     if (selector === 'Clima') {
       fetchClima(dataInput)
       setDataInput('')
@@ -61,7 +83,7 @@ export const BuscadorPage = () => {
   const handlePlaceHolder = () => {
     switch (selector) {
       case 'Buscador':
-        return '<-- Selecciona un tema...'
+        return 'Selecciona un tema...'
       case 'Clima':
         return 'Ingresa una ciudad...'
       case 'Peliculas':
@@ -79,6 +101,13 @@ export const BuscadorPage = () => {
       return "Buscador"
     }
   } 
+  const iconosTema = () => {
+    if (selector === 'Clima' && iconoTema) {
+      return <img className="iconoClima" src={iconWeather} alt="icono clima" />
+    } else if (selector === 'Peliculas' && iconoTema) {
+      return <img className="iconoPelicula" src={iconMovie} alt="icono pelicula" />
+    }
+  }
   return (
     <div className='buscar'>
       <h1 className='titulo'>{titulo(selector)} </h1>
@@ -105,10 +134,13 @@ export const BuscadorPage = () => {
             disabled={selector === 'Buscador'}
             id='inputBuscar'
             autoComplete='on'
+            autoFocus
           />
         </div>
       </form>
       {seleccionada()}
+      {iconosBuscar()}
+      {iconosTema()}
     </div>
   )
 }
