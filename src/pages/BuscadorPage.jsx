@@ -12,6 +12,19 @@ export const BuscadorPage = () => {
   const {fetchClima} = useContext(ClimaContext)
   const {fetchMovie} = useContext(MovieContext)
 
+  const clima = () => {
+    setSelector('Clima')
+  }
+  const peliculas = () => {
+    setSelector('Peliculas')
+  }
+  const infoBuscar = <h4 className="textoEnBuscador">
+    Busca el <a className='aClima' href='#' onClick={clima}>clima </a> 
+    actual en la ciudad que quieras o busca 
+    información sobre una 
+    <a className='aPelicula' href='#' onClick={peliculas}> película </a>  
+    por el nombre.
+  </h4>
   const handleChanges = (e) => {
     setDataInput(e.target.value)
   }
@@ -28,6 +41,8 @@ export const BuscadorPage = () => {
   }
   const seleccionada = () =>{
     switch (selector) {
+      case 'Buscador':
+        return infoBuscar
       case 'Clima':
         if (enviado.length > 0) {
           return <Clima ></Clima>
@@ -43,12 +58,6 @@ export const BuscadorPage = () => {
       default:
         return
     }
-  }
-  const clima = () => {
-    setSelector('Clima')
-  }
-  const peliculas = () => {
-    setSelector('Peliculas')
   }
   const handlePlaceHolder = () => {
     switch (selector) {
@@ -82,7 +91,6 @@ export const BuscadorPage = () => {
             disabled={dataInput < 1}
           >Buscar</button>
           <button type="button" className="btn btn-outline-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            {/* <span className="visually-hidden">Toggle Dropdown</span> */}
           </button>
           <ul className="dropdown-menu listaTemas" >
             <li><a onClick={clima} className="dropdown-item" >Clima</a></li>

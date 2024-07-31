@@ -1,10 +1,15 @@
 .carrito {
-  max-width: 800px;
-  min-width: 400px;
-  margin:30px auto;
+  max-width: 50rem;
+  /* min-width: 25rem; */
+  margin:1.875rem auto;
+}
+.tituloCarrito {
+  text-align: center;
+  color: rgb(88, 88, 88);
+  margin-bottom: 1rem;
 }
 .linkCompras {
-  font-size: 30px;
+  font-size: 1.875rem;
   color: green;
   margin: auto;
   display: flex;
@@ -13,8 +18,5 @@
 .sinCompras {
   color: rgb(43, 144, 226);
   text-align: center;
-  margin-top: 40px;
-}
-.tituloCarrito {
-  text-align: center;
+  margin-top: 2.5rem;
 }
