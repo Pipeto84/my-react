@@ -1,6 +1,6 @@
 .carrito {
   max-width: 50rem;
-  min-width: 25rem;
+  /* min-width: 25rem; */
   margin:1.875rem auto;
 }
 .tituloCarrito {
