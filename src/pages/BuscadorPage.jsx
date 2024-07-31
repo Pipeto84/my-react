@@ -22,8 +22,7 @@ export const BuscadorPage = () => {
     Busca el <a className='aClima' href='#' onClick={clima}>clima </a> 
     actual en la ciudad que quieras o busca 
     información sobre una 
-    <a className='aPelicula' href='#' onClick={peliculas}> película </a>  
-    por el nombre.
+    <a className='aPelicula' href='#' onClick={peliculas}> película.</a>  
   </h4>
   const handleChanges = (e) => {
     setDataInput(e.target.value)
@@ -77,7 +76,7 @@ export const BuscadorPage = () => {
     }else if (selector === "Peliculas") {
       return "Información Películas"
     }else {
-      return "Buscador informativo"
+      return "Buscador"
     }
   } 
   return (
