@@ -1,10 +1,10 @@
 .contenedor-compras {
-  max-width: 1220px;
+  max-width: 76.25rem;
   margin: auto;
 }
 .tituloProductos {
   text-align: center;
-  margin: 20px;
+  margin: 1.25rem;
   color: green;
 }
 .contenedor-productos {
@@ -15,9 +15,9 @@
   grid-template-rows: auto 1fr auto auto;
 }
   
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 76.25rem) {
   .contenedor-productos {
-    width: 620px;
+    width: 38.75rem;
     margin: auto;
     grid-template-columns: 1fr;
   }
