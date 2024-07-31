@@ -3,10 +3,12 @@
   background-color: #57a1dd;
   height: 100vh;
   color: rgb(36, 36, 36);
+  padding-top: 3rem;
 }
 .titulo {
   padding: 2.5rem 1.25rem 1.25rem;
   margin: 0;
+  color: rgb(20, 110, 20)
 }
 .buscador {
   max-width: 37.5rem;
@@ -25,14 +27,23 @@
   margin: auto;
 }
 .aClima, .aPelicula {
-  color: rgb(148, 86, 86);
+  color: rgb(202, 40, 40);
 }
-.iconoClima {
+.iconoClima1 {
   max-width: 5rem;
   margin-top: 2rem;
   margin-right: 2rem;
 }
-.iconoPelicula {
+.iconoClima2 {
+  max-width: 5rem;
+  margin-top: 1rem;
+}
+.iconoPelicula1 {
   max-width: 5rem;
   margin-top: 2rem;
+  margin-right: 2rem;
+}
+.iconoPelicula2 {
+  max-width: 5rem;
+  margin-top: 1rem;
 }
