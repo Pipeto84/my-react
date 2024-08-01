@@ -15,14 +15,14 @@ export const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
+          <li className="nav-item">
+              <NavLink to='/buscador' className="nav-link" >Buscador</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to='/compras' className="nav-link" >Productos</NavLink>
+            </li>
             <li className="nav-item">
               <NavLink to='/tareas' className="nav-link" >Tareas</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to='/compras' className="nav-link" >Compras</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to='/buscador' className="nav-link" >Buscador</NavLink>
             </li>
           </ul>
         </div>

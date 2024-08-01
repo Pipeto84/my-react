@@ -1,16 +1,16 @@
 .formulario {
-  max-width: 640px;
-  padding: 30px;
+  max-width: 40rem;
+  padding: 1.875rem;
   background-color: rgb(71, 71, 71);
-  margin: 30px auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 1.875rem auto;
+  border-radius: .625rem;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.5);
 
   display: flex;
   flex-direction: column;
 }
 .labelTitulo {
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: white;
 }
 .botonesForm {
@@ -18,27 +18,27 @@
   grid-template-columns: auto auto;
 }
 .botonCrearTarea {
-  width: 80px;
+  width: 5rem;
 }
 .botonEliminarTodas {
   justify-self: end;
-  width: 130px;
+  width: 8.125rem;
 }
 .listaTareas {
-  max-width: 640px;
+  max-width: 40rem;
   margin: auto;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-columns: repeat(auto-fit, 12.5rem);
   grid-template-rows: auto 1fr auto;
-  gap: 20px;
+  gap: 1.25rem;
 }
 .contenedorTarea {
   background-color: rgb(71, 71, 71);
-  padding: 20px;
+  padding: 1.25rem;
   color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: .625rem;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.5);
 
   display: grid;
   grid-row: span 3;
@@ -50,7 +50,7 @@
 .botonEliminarTarea {
   justify-self: center;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 26.25rem) {
   .listaTareas {
     justify-content: center;
   }
