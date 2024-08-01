@@ -31,7 +31,7 @@ export const BuscadorPage = () => {
   }
   const infoBuscar = <h4 className="textoEnBuscador">
     Busca el <a className='aClima' href='#' onClick={clima}>Clima </a> 
-    actual de una ciudad o busca información sobre una 
+    actual de una ciudad o busca información de una 
     <a className='aPelicula' href='#' onClick={peliculas}> Película.</a>  
   </h4>
   const iconosBuscar = () => {
