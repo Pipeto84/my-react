@@ -1,4 +1,4 @@
-import {useState, useContext} from 'react'
+import {useState, useContext, useRef} from 'react'
 import { Clima } from '../components/buscador/Clima'
 import { Peliculas } from '../components/buscador/Peliculas'
 import { ClimaContext } from '../context/ClimaContext'
@@ -18,16 +18,19 @@ export const BuscadorPage = () => {
   const [iconoTema, setIconoTema] = useState(false)
   const {fetchClima} = useContext(ClimaContext)
   const {fetchMovie} = useContext(MovieContext)
+  const inputRef = useRef()
 
   const clima = () => {
     setSelector('Clima')
     setIconoTema(true)
     setEnviado('')
+    inputRef.current.focus()
   }
   const peliculas = () => {
     setSelector('Peliculas')
     setIconoTema(true)
     setEnviado('')
+    inputRef.current.focus()
   }
   const infoBuscar = <h4 className="textoEnBuscador">
     Busca el <a className='aClima' href='#' onClick={clima}>Clima </a> 
@@ -146,10 +149,9 @@ export const BuscadorPage = () => {
             value={dataInput}
             onChange={handleChanges}
             placeholder={handlePlaceHolder()}
-            disabled={selector === 'Buscador'}
             id='inputBuscar'
             autoComplete='on'
-            autoFocus
+            ref={inputRef}
           />
         </div>
       </form>
