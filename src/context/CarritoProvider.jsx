@@ -30,11 +30,11 @@ export const CarritoProvider = ({children}) => {
   }
 
   const {productos} = useContext(ProductoContext)
+  
   const cambiarAgregarProductos = (idCompra, productos) => {
     productos.map(producto=>{
       if(idCompra === producto.id)return producto.agregar = !producto.agregar
     })
-    // console.log(productos)
   }
 
   const [listaCompras, dispatch] = useReducer(listaReducer, initialLista)
