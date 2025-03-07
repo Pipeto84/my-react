@@ -150,7 +150,7 @@ export const BuscadorPage = () => {
             onChange={handleChanges}
             placeholder={handlePlaceHolder()}
             id='inputBuscar'
-            autoComplete='on'
+            autoComplete='off'
             ref={inputRef}
           />
         </div>

@@ -23,9 +23,9 @@ export const CarritoPage = () => {
       <table className="table table-striped" hidden={listaCompras < 1}>
         <thead>
           <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Cantidad</th>
+            <th scope="col" className="column">Nombre</th>
+            <th scope="col" className="column">Precio</th>
+            <th scope="col" className="column">Cantidad</th>
             <th scope="col"></th>
           </tr>
         </thead>
