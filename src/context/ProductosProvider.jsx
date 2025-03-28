@@ -9,6 +9,7 @@ export const ProductosProvider = ({children}) => {
     try {
       const response = await fetch('https://fakestoreapi.com/products')
       const data = await response.json()
+      console.log(data)
       data.map(item=>item.agregar = false)
       setProductos(data)
     } catch (error) {
